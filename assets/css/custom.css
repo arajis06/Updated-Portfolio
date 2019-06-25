@@ -1,0 +1,64 @@
+body {
+  background-color: wheat;
+}
+.jumbotron {
+  height: 70vh;
+  background-image: url("../images/alexis-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.my-h4 {
+  color: purple;
+}
+
+/* @media (max-width: 740px) { 
+  html,
+  body,
+  header,
+  .jarallax {
+    height: 100vh;
+  }
+}*/
+
+ /* @media (min-width: 800px) and (max-width: 850px) { 
+  .jumbotron {
+    height: 100vh;
+  }
+}*/
+
+@media (min-width: 560px) and (max-width: 660px) {
+  header .jumbotron h5 {
+    display: none !important;
+  }
+}
+h1 {
+
+}
+
+.page-footer {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.header-container {
+  margin-left: 40%;
+}
+
+
+
+.name {
+    /* margin-top: -100px; */
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 3px purple;
+    font-style: italic;
+    font: 'wonderland 2';
+}
+.name-title {
+    color: purple;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px white;
+    margin-left: 7%;
+  }
+  
+.sub-title {
+  margin-left: 15%;
+}
