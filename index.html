@@ -5,12 +5,15 @@
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bootrap-Student Bio</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!--MDbootstrap-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" />    
         <!-- Custom Css -->
         <link rel="stylesheet" href="assets/css/custom.css">
+        <link ref="stylesheet" href="assets/css/fonts/stylesheet.css">
     </head>
     
 
@@ -19,33 +22,44 @@
         <div class="container">
         <!-- Intro Section -->
         <div class="jumbotron mean-fruit-gradient">
-          <div class="container header-container">
-            <div class="row header-info pt-5 mt-3">
-              <div class="col-md-12 mb-3">
+            <div class="row header-info mt-3">
+              <div class="col-md-12 mt-5 mb-3">
                 <div class="intro-info-content justify-content-right">
-                  <h1 class=" name pt-10 display-3 white-text mb-5 wow fadeInDown" data-wow-delay="0.3s">Hi! I'm<br> <strong class="name-title">Alexis Rajis</strong></h1>
-                  <h5 class=" sub-title text-uppercase purple-text mb-5 font-weight-bold wow fadeInDown" data-wow-delay="0.3s">Web Developer</h5>
+                  <h1 class=" welcome pt-10">Welcome to My Wonderland.</h1> 
+                  <h2 class=" wow fadeInDown" data-wow-delay="0.3s">I am <strong class="name">Alexis Rajis</strong></h2>
+                  <h5 class=" sub-title text-uppercase wow fadeInDown" data-wow-delay="0.3s">Web Developer</h5>
+                  <!-- Add font awesome icons -->
+                  <div class="icons">
+                    <a href="https://www.linkedin.com/in/alexis-rajis-69903a63" target="_blank" class="fa fa-linkedin"></a>
+                    <a href="https://github.com/arajis06" target="_blank" class="fa fa-github" aria-hidden="true"></a>
+                    <a href="https://www.facebook.com/arajis1" target="_blank" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/phoenixroze_/?hl=en" target="_blank" class="fa fa-instagram"></a>
+                  </div>
                 </div>
               </div><!--col end-->
             </div><!--row end-->
-          </div><!--container end-->
         </div><!--jumbotron end-->
-      </div>
+      </div><!--container end-->
       </header>
 
         <!--Main Layout-->
-        <div class="container bg-white">
+        <div class="container about-section bg-white">
             <div class="row text-center">
-              <div class="col-md-6">
+              <div class="col-md-7">
                 <h3 class="my-3 font-weight-bold"><strong>About Me</strong></h3>
                 <p class= "paragraph">I was born and raised in Philadelphia, where I currently reside now with my two beautiful children. I have a background working in the fashion and beauty industry, and obtained different titles and experience. I'm currently now on a career changing journey to become a profession Web Developer.I've always been drawn to creating and designing new and different things, which is why I obtained a degree in Fashion Design, but now instead of making clothes I rather make amazing websites.</p>
                 <hr class="my-4">
-                <a class="btn btn-secondary btn-lg" href="assets/Alexis Rajis resume '19.pdf" role="button">Resume</a>
+                <a class="btn btn-secondary btn-lg" href="assets/Alexis Rajis resume '19.pdf" target="_blank" role="button">Resume</a>
               </div><!--col end-->
+              <div class="col-md-5">
+                <h3 class="my-3 font-weight-bold">Knowledge</h3>
+                  <canvas id="doughnutChart"></canvas>
+              </div>
             </div><!--row end-->
           </div><!--container end-->
           <br><br>
-          <!-- <div class="container "> -->
+
+          <div class="container ">
             <h2 class="h1-responsive font-weight-bold mb-5 text-center">My Portfolio</h2>
               <div class="row text-center">
                 <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
@@ -59,7 +73,7 @@
                   <!--Body Content-->
                   <div class="card-body pb-0">
                     <h4 class="font-weight-bold my-3">Trivia Game</h4>
-                      <a href="https://arajis06.github.io/Trivia_Game/" class="btn btn-purple btn-sm"><i class="fa fa-clone left"></i> Check it Out</a>
+                      <a href="https://arajis06.github.io/Trivia_Game/" target="_blank"class="btn btn-purple btn-sm"><i class="fa fa-clone left"></i> Check it Out</a>
                   </div><!--card-body-end-->
                 </div><!--col end-->
                     
@@ -74,7 +88,7 @@
                   <!--Body Content-->
                   <div class="card-body pb-0">
                     <h4 class="font-weight-bold my-3">Train Scheduler</h4>
-                      <a href ="https://arajis06.github.io/Train-Schedule/" class="btn btn-purple btn-sm"><i class="fa fa-clone left"></i>Check it Out</a>
+                      <a href ="https://arajis06.github.io/Train-Schedule/" target="_blank" class="btn btn-purple btn-sm"><i class="fa fa-clone left"></i>Check it Out</a>
                   </div><!--card body end-->
                 </div><!--col end-->
 
@@ -89,7 +103,7 @@
                   <!--Body Content-->
                   <div class="card-body pb-0">
                     <h4 class="font-weight-bold my-3">GifTastic</h4>
-                      <a href ="https://arajis06.github.io/Gif_Tastic/" class="btn btn-purple btn-sm"><i class="fa fa-clone left"></i> Check it Out</a>
+                      <a href ="https://arajis06.github.io/Gif_Tastic/" target="_blank"class="btn btn-purple btn-sm"><i class="fa fa-clone left"></i> Check it Out</a>
                   </div><!--Card body end-->
                 </div><!-- Grid column end -->
               </div><!-- Grid row -->

@@ -2,7 +2,7 @@ body {
   background-color: wheat;
 }
 .jumbotron {
-  height: 70vh;
+  height: 90vh; 
   background-image: url("../images/alexis-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,7 +10,90 @@ body {
 .my-h4 {
   color: purple;
 }
+h1 {
+  text-align: end;
+  margin-right: 25px;
+}
+h2 {
+  margin-top: 30px;
+  font-family: 'boulevardregular';
+  text-align-last: center;
+  margin-left: 30%;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 500;
+}
+h3 {
+  margin: 16px 0;
+}
+.welcome { 
+  margin-top: 10px;
+  color: white;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 3px rgba(128, 0, 128, 0.767);
+  font-style: italic;
+  /* font-family: "Playfair Display", Georgia, "Times New Roman", serif; */
+  font-family: 'wonderlandregular' ;
+}
+.name {
+  color: rgba(128, 0, 128, 0.767);
+  font-weight: bold;
+  font-size: 45px;
+  text-shadow: 2px 2px 3px white;
+  font-style: normal;
 
+}
+
+.sub-title {
+font-weight: 600;
+text-align-last: center;
+margin-left: 50%;
+color: rgb(39, 197, 181);
+padding-top: -5px;
+}
+.about-section {
+  padding: 20px;
+}
+.paragraph {
+  padding: 20px;
+}
+#doughnutChart {
+  margin-top: 30px;
+}
+
+.page-footer {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+/* ICONS */
+.icons {
+  text-align-last: right;
+  margin-right: 20%;
+  margin-top: 5%
+  
+}
+.fa {
+  padding: 20px 40px 10px;
+  font-size: 40px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-github {
+  color: black;
+}
+.fa-linkedin {
+  color: rgb(39, 197, 181);
+}
+.fa-facebook {
+  color: white;
+}
+.fa-instagram {
+  color: purple;
+}
 /* @media (max-width: 740px) { 
   html,
   body,
@@ -31,34 +114,7 @@ body {
     display: none !important;
   }
 }
-h1 {
-
-}
-
-.page-footer {
-  margin-top: 0px;
-  padding-top: 0px;
-}
-.header-container {
-  margin-left: 40%;
-}
 
 
 
-.name {
-    /* margin-top: -100px; */
-    font-size: 3.5rem;
-    text-shadow: 2px 2px 3px purple;
-    font-style: italic;
-    font: 'wonderland 2';
-}
-.name-title {
-    color: purple;
-    font-weight: bold;
-    text-shadow: 2px 2px 3px white;
-    margin-left: 7%;
-  }
-  
-.sub-title {
-  margin-left: 15%;
-}
+
