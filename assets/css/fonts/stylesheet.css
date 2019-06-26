@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'belinda_scriptscript';
-    src: url('belinda_script-webfont.woff2') format('woff2'),
+    src: url('../fonts/belinda_script-webfont.woff2') format('woff2'),
          url('belinda_script-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: 'wonderlandregular';
-    src: url('wonderland_2-webfont.woff2') format('woff2'),
+    src: url('Users/ALEXIS/Updated-Portfolio/css/fonts/wonderland_2-webfont.woff2') format('woff2'),
          url('wonderland_2-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
