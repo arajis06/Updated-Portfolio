@@ -11,7 +11,7 @@ body {
   color: purple;
 }
 h1 {
-  text-align: end;
+  text-align: center;
   margin-right: 25px;
 
 }
@@ -100,13 +100,14 @@ padding-top: -5px;
 .card-body {
   padding-top: 0;
 }
-.contact-form {
-  
-
-}
-.first-footer {
+.contact-title {
+  margin-top: 0;
+  color: white;
+  text-align: center;
+  font-style: normal;
   padding: 20px;
 }
+
 .form-control {
   color: black;
 }
@@ -115,12 +116,18 @@ padding-top: -5px;
 }
 .container-contact {
   max-width: 1120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 
 }
 /* ICONS */
 .icons {
   text-align: center;
-  
+  margin: -10px 0 10px;
+}
+.icon-title {
+  color: rgb(18, 158, 144);
+  text-shadow: 1px 1px 3px white;
 }
 .links {
   padding: 10px 5px 10px; 
@@ -140,6 +147,9 @@ padding-top: -5px;
   color: rgb(39, 197, 181);
 }
 .fa-instagram {
+  color: purple;
+}
+.fa-envelope {
   color: purple;
 }
 /* @media (max-width: 740px) { 

@@ -21,36 +21,7 @@
     
 
 <body>
-  <header>
-            <!--Navbar-->
-            <nav class="navbar navbar-light purple lighten-4 mb-4">
-              <!-- Navbar brand -->
-                <a class="navbar-brand justify-content-center text-white">Alexis Rajis</a>
-                <!-- Collapse button -->
-                <button class="navbar-toggler toggler-example purple-gradient" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent41" aria-controls="navbarSupportedContent41" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="white-text"><i class="fa fa-bars fa-1x"></i></span>
-                </button>
-    
-                <!-- Collapsible content -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent41">
-                  <!-- Links -->
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#one">About Me<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#two">My Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#three">Contact Me</a>
-                    </li>
-                  </ul>
-                  <!-- Links end -->
-                </div><!-- Collapsible content end -->
-                  
-              </nav><!--Navbar end-->
- 
+            
     <!-- Intro Section -->
     <div class="container">
           <div class="jumbotron mean-fruit-gradient">
@@ -59,7 +30,7 @@
               
 
                 <div class="intro-info-content justify-content-right">
-                  <h1 class="h1-responsive welcome pt-10">Welcome to My Wonderland.</h1> 
+                  <h1 class="h1-responsive welcome pt-10">HELLO.</h1> 
                   <h2 class=" iam wow fadeInDown" data-wow-delay="0.3s">I am <strong class="name">Alexis Rajis</strong></h2>
                   <h5 class=" sub-title text-uppercase wow fadeInDown" data-wow-delay="0.3s">Web Developer</h5>
                 </div>
@@ -67,7 +38,6 @@
             </div><!--row end-->
         </div><!--jumbotron end-->
       </div><!--container end-->
-      </header>
 
         <!--Main Layout-->
       <section>
@@ -165,30 +135,104 @@
           </section>
 
           <!--4-->  
-            <div class="container container-contact lighten-3 pb-5">
+            <div class="container container-contact bg-white lighten-3 pb-5">
+                <!-- Row -->
                 <div class="row">
                   <div class="col-md-12">
-                    <h3 class="portfolio-title font-weight-bold mb-5 purple-gradient">Get In Touch</h3>
-                    
-                       <!-- Add font awesome icons -->
-                    <div class="icons">
-                      <!-- Icon Links -->
-                        <a href="https://www.linkedin.com/in/alexis-rajis-69903a63" target="_blank" class="fa fa-linkedin links mt-4 fa-2x"></a>
-                        <a href="https://github.com/arajis06" target="_blank" class="fa fa-github links mt-4 fa-2x" aria-hidden="true"></a>
-                        <a href="https://www.instagram.com/phoenixroze_/?hl=en" target="_blank" class="fa fa-instagram links mt-4 fa-2x"></a>
-                        <a href='mailto:alexis.rajis1@gmail.com' target="_blank" class="fa fa-envelope links mt-4 fa-2x"></a><br>
-                        <i class="fa fa-phone mt-4 fa-2x"></i><p><strong>484-431-3967</strong></p>
-                      </ul>
-                    </div>
-                  </div><!--col end-->
-                </div><!--row end-->
-            </div><!--container end-->
+                    <h3 class="contact-title font-weight-bold mb-5 purple-gradient">Get In Touch</h3>
+                  </div> 
+                </div>
+                <!-- row end -->
 
-            <!--Footer-->
-            <footer>
-                <div class="row copywrite">
-                  <div class="col-md-12">
-                    <h5 class="my-3 text-center">&copy; 2019 Copyright: Alexis Rajis</h5>
+                <!-- Row -->
+                <div class="row">
+                  <div class="col-md-9 mb-md-0 mb-5">
+                  <!-- Form -->
+                  <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                    <!-- row -->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input type="text" id="name" name="name" class="form-control">
+                          <label for="name" class="">Your name</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input type="text" id="email" name="email" class="form-control">
+                          <label for="email" class="">Your email</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- row end-->
+
+                    <!--row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <input type="text" id="subject" name="subject" class="form-control">
+                                <label for="subject" class="">Subject</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row end-->
+
+                    <!--row-->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="md-form">
+                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                          <label for="message">Your message</label>
+                        </div>
+                       </div>
+                    </div>
+                <!--row end-->
+
+                </form>
+
+                <div class="text-center text-md-left">
+                    <a class="btn purple-gradient text-white btn-lg" onclick="validateForm()">Send</a>
+                </div>
+                <div class="status"></div>
+            </div>
+            <!--column end-->
+
+            <!--Grid column-->
+            <div class="col-md-3 text-center">
+              <p>Location: Philadelphia, PA</p>
+                <ul class="list-unstyled mb-0">
+                    <li><i class="fa fa-phone mt-4 fa-2x"></i>
+                        <p>484-431-3967</p>
+                    </li>
+
+                    <li><a href='mailto:alexis.rajis1@gmail.com' target="_blank" class="fa fa-envelope links mt-4 fa-2x"></a>
+                        <p>alexis.rajis1@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+        </div><!--row end-->
+      </div><!--container end-->
+
+      <!--Footer-->
+      <footer class="container-fluid page-footer lighten-3">
+        <div class="row purple-gradient">
+          <div class="first-footer col-md-12">
+            <h3 class ="icon-title text-center font-weight-bold mb-3">Connect With Me</h3>
+            <!-- Add font awesome icons -->
+                <div class="icons">
+                  <!-- Icon Links -->
+                    <a href="https://www.linkedin.com/in/alexis-rajis-69903a63" target="_blank" class="fa fa-linkedin links mt-4 fa-2x"></a>
+                    <a href="https://github.com/arajis06" target="_blank" class="fa fa-github links mt-4 fa-2x" aria-hidden="true"></a>
+                    <a href="https://www.instagram.com/phoenixroze_/?hl=en" target="_blank" class="fa fa-instagram links mt-4 fa-2x"></a>
+                </div>
+              </div><!--col end-->
+            </div><!--row end-->
+
+            <!-- row -->
+            <div class="row copywrite">
+              <div class="col-md-12">
+                <h5 class="my-3 text-center">&copy; 2019 Copyright: Alexis Rajis</h5>
                   </div>
                 </div><!--row end-->
             </footer>
