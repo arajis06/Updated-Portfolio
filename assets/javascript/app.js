@@ -22,34 +22,65 @@ $(function () {
 //   }
 // });
 
-function validateForm() {
-  var name =  document.getElementById('name').value;
-  if (name == "") {
-      document.getElementById('status').innerHTML = "Name cannot be empty";
-      return false;
-  }
-  var email =  document.getElementById('email').value;
-  if (email == "") {
-      document.getElementById('#status').innerHTML = "Email cannot be empty";
-      return false;
-  } else {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(!re.test(email)){
-          document.getElementById('status').innerHTML = "Email format invalid";
-          return false;
-      }
-  }
-  var subject =  document.getElementById('subject').value;
-  if (subject == "") {
-      document.getElementById('status').innerHTML = "Subject cannot be empty";
-      return false;
-  }
-  var message =  document.getElementById('message').value;
-  if (message == "") {
-      document.getElementById('status').innerHTML = "Message cannot be empty";
-      return false;
-  }
-  document.getElementById('status').innerHTML = "Sending...";
-  document.getElementById('contact-form').submit();
+$(function()
+{
+    function after_form_submitted(data) 
+    {
+        if(data.result == 'success')
+        {
+            $('form#contact-form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+        }
+        else
+        {
+            $('#error_message').append('<ul></ul>');
 
-  }
+            jQuery.each(data.errors,function(key,val)
+            {
+                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+            });
+            $('#success_message').hide();
+            $('#error_message').show();
+
+            //reverse the response on the button
+            $('button[type="button"]', $form).each(function()
+            {
+                $btn = $(this);
+                label = $btn.prop('orig_label');
+                if(label)
+                {
+                    $btn.prop('type','submit' ); 
+                    $btn.text(label);
+                    $btn.prop('orig_label','');
+                }
+            });
+            
+        }//else
+    }
+
+	$('#contact-form').submit(function(e)
+      {
+        e.preventDefault();
+
+        $form = $(this);
+        //show some response on the button
+        $('send-btn[type="submit"]', $form).each(function()
+        {
+            $btn = $(this);
+            $btn.prop('type','button' ); 
+            $btn.prop('orig_label',$btn.text());
+            $btn.text('Sending ...');
+        });
+        
+
+                    $.ajax({
+                type: "POST",
+                url: 'mail.php',
+                data: $form.serialize(),
+                success: after_form_submitted,
+                dataType: 'json' 
+            });        
+        
+      });	
+});

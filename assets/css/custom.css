@@ -7,6 +7,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.intro-info-content {
+  margin-top: 15%;
+  margin-left: 30%;
+}
 .my-h4 {
   color: purple;
 }
@@ -37,7 +41,7 @@ h5 {
   margin-left: 18%;
   font-weight: bold;
   font-size: 18px;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: purple;
 }
 .welcome { 
@@ -47,7 +51,8 @@ h5 {
   text-shadow: 2px 2px 3px rgba(128, 0, 128, 0.767);
   font-style: italic;
   /* font-family: "Playfair Display", Georgia, "Times New Roman", serif; */
-  font-family: 'Libre Baskerville', serif;
+  /* font-family: 'Libre Baskerville', serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .name {
   color: rgba(128, 0, 128, 0.767);

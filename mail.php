@@ -1,36 +1,26 @@
 <?php
-if(isset( $_POST['name']))
-$name = $_POST['name'];
-if(isset( $_POST['email']))
-$email = $_POST['email'];
-if(isset( $_POST['message']))
-$message = $_POST['message'];
-if(isset( $_POST['subject']))
-$subject = $_POST['subject'];
-if ($name === ''){
-echo "Name cannot be empty.";
-die();
-}
-if ($email === ''){
-echo "Email cannot be empty.";
-die();
-} else {
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-echo "Email format invalid.";
-die();
-}
-}
-if ($subject === ''){
-echo "Subject cannot be empty.";
-die();
-}
-if ($message === ''){
-echo "Message cannot be empty.";
-die();
-}
-$content="From: $name \nEmail: $email \nMessage: $message";
-$recipient = "alexis.rajis1@gmail.com";
-$mailheader = "From: $email \r\n";
-mail($recipient, $subject, $content, $mailheader) or die("Error!");
-echo "Email sent!";
-?>
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+/*
+Tested working with PHP5.4 and above (including PHP 7 )
+
+ */
+require_once './vendor/autoload.php';
+
+use FormGuide\Handlx\FormHandler;
+
+
+$pp = new FormHandler(); 
+
+$validator = $pp->getValidator();
+$validator->fields(['name','email'])->areRequired()->maxLength(50);
+$validator->field('email')->isEmail();
+$validator->field('message')->maxLength(6000);
+
+
+
+
+$pp->sendEmailTo('arajis06@gmail.com'); // ← Your email here
+
+echo $pp->process($_POST);
